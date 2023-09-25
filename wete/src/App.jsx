@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import HomeSection from './components/HomeSection'
 import AboutSection from './components/AboutSection'
 import ProjectSection from './components/ProjectSection'
+import Footer from './components/Footer'
+import ContactSection from './components/ContactSection'
 function App() {
 
   return (
@@ -12,6 +14,8 @@ function App() {
         <HomeSection/>
         <AboutSection/>
         <ProjectSection/>
+        <ContactSection/>
+        <Footer/>
       </div>
     </main>
   )

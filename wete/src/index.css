@@ -22,3 +22,17 @@
   height: 1px;
   background: #3d3d3d;
 }
+
+.parent {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+.parent[data-isOpen="true"] {
+  width: 100%;
+  height: 100%;
+}
+
+

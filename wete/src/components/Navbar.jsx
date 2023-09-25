@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Logo from '../assets/Logo.png'
 import {AiOutlineInstagram, AiFillLinkedin,AiFillGithub} from 'react-icons/ai';
-import Link from "react-scroll";
+import {Link} from "react-scroll";
 import MenuOverlay from "./MenuOverlay";
 
 const Navbar = () => {
@@ -10,19 +10,19 @@ const Navbar = () => {
     const NavLinks = [
         {
             Name: 'Home',
-            href: '#home'
+            link: 'home'
         },
         {
             Name: 'About',
-            href: '#about'
+            link: 'about'
         },
         {
             Name: 'Projects',
-            href: '#projects'
+            link: 'project'
         },
         {
             Name: 'Contact',
-            href: '#contact',
+            link: 'contact',
         },
     ]
     return (
@@ -34,9 +34,9 @@ const Navbar = () => {
 
                 <ul className="hidden md:flex flex-row justify-between gap-x-8 font-poppins text-[15px]">
                     {NavLinks.map((nav,index)=>(
-                        <li className='border-b-2 border-transparent hover:border-black selection:transition-all duration-300' key={index}>
+                        <Link to={nav.link} className='border-b-2 border-transparent hover:border-black selection:transition-all duration-300' key={index} smooth={true} duration={400}>
                             {nav.Name}
-                        </li>
+                        </Link>
                     ))}
                 </ul>
 
@@ -50,9 +50,11 @@ const Navbar = () => {
                 </div>
 
                 <ul className="hidden md:flex font-bold flex-row items-center gap-4">
-                    <a href='' className="p-2 rounded-full bg-gray-200 hover:scale-105"><AiFillLinkedin size={25}/></a>
-                    <a href='' className="p-2 rounded-full bg-gray-200 hover:scale-105"><AiFillGithub size={25}/></a>
-                    <a href='' className="p-2 rounded-full bg-gray-200 hover:scale-105"><AiOutlineInstagram size={25}/></a>
+                    <a href='https://www.linkedin.com/in/william-tanjaya-834930277/' className="p-2 rounded-full bg-gray-200 hover:scale-105">
+                        <AiFillLinkedin size={25}/>
+                    </a>
+                    <a href='https://github.com/WTaroki?tab=repositories' className="p-2 rounded-full bg-gray-200 hover:scale-105"><AiFillGithub size={25}/></a>
+                    <a href='https://www.instagram.com/william_tanjaya_/' className="p-2 rounded-full bg-gray-200 hover:scale-105"><AiOutlineInstagram size={25}/></a>
                 </ul>
 
             </div>     

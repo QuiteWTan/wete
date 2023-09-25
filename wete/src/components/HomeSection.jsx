@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HomeSection = () => {
   return (
-    <section className='w-full max-w-[1300px] flex flex-row py-4 sm:py-12 md:py-24 md:px-4 px-4 min-h-screen md:h-screen'>
+    <section className='w-full max-w-[1300px] flex flex-row py-4 sm:py-12 md:py-24 md:px-4 px-4 min-h-screen md:h-screen' name="home">
         <motion.div
         className="flex flex-col-reverse md:flex-row w-full justify-center items-center"
         initial="hidden"
