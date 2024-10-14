@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from '../assets/HomeAvatar.png'
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const HomeSection = () => {
   return (
@@ -27,13 +28,20 @@ const HomeSection = () => {
                     <p className="font-raleway py-2 max-w-[600px] text-lg md:text-md">
                     Currently pursuing my undergraduate degree in Information Technology, I'm constantly seeking opportunities to learn and grow.
                     </p>
-                    <div className=''>
-                        <button className='py-2 text-white bg-gray-500 px-4 rounded-md opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300'>Contact Me</button>
-                        <button className='p-2 px-6'>
-                            <h1 className='py-2 border-gray-500 outline-gray-500 border-2 px-4 rounded-md text-gray-500 hover:opacity-100 hover:scale-110 transition-all duration-300'>
-                                About
-                            </h1>
-                        </button>
+                    <div className="flex flex-row gap-2 items-center">
+                        <Link to="contact" smooth={true} duration={700}>
+                            <button className='py-2 text-white bg-gray-500 px-4 rounded-md opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300'>
+                                Contact Me
+                            </button>
+                        </Link>
+                        <Link to="about" smooth={true} duration={500}>
+                            <button className='p-2 px-4' >
+                                <h1 to="about"className='py-2 border-gray-500 outline-gray-500 border px-4 rounded-md text-gray-500 hover:opacity-100 hover:scale-110 transition-all duration-300'>
+                                        About
+                                </h1>
+                            </button>
+                        </Link>
+                        
                     </div>
                 </div>
                 <div className='w-[80%] md:w-[60%] lg:w-[80%] rounded-full flex items-center justify-center'>

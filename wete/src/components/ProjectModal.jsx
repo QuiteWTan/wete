@@ -26,6 +26,7 @@ const ProjectModal = ({desc, github, preview}) => {
       title: 'No Preview Available'
     })
   }
+  
   return (
     <motion.div
       layout

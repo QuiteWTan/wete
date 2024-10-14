@@ -3,7 +3,7 @@ import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({ imgUrl, title,theme, description, github, preview, categories }) => {
   return (
-    <div className="flex flex-col font-raleway bg-gray-200 shadow-md rounded-md max-w-[280px] md:w-[300px] md:max-w-none overflow-hidden">
+    <div className="flex flex-col font-raleway bg-gray-200 shadow-xl rounded-md max-w-[280px] md:w-[300px] md:max-w-none overflow-hidden">
       <div className="relative max-h-[280px] max-w-[280px] md:max-w-none  md:max-h-none md:w-[300px] md:h-[250px]">
         <img src={imgUrl} alt="" className=" max-h-[280px] max-w-[280px] md:max-w-none  md:max-h-none md:w-[300px] md:h-[250px]"/>
         <ProjectModal desc={description} github={github} preview={preview}/>
@@ -14,7 +14,7 @@ const ProjectCard = ({ imgUrl, title,theme, description, github, preview, catego
           <h1 className="font-bold text-xl">{title}</h1>
           <p className="text-gray-500 font-poppins font-bold text-sm">{theme}</p>
         </div>
-        <hr  className='w-[40px] font-bold text-black border-black border-2 rounded-full'/>
+        <h1 className="text-gray-500 text-sm font-bold">Tech Stack :</h1>
         <ul className="flex flex-wrap gap-2">
           {categories.map((cat,index)=>(
             <li className="px-3 py-2 rounded-md bg-gray-300 shadow-md text-xs font-bold">{cat}</li>
